@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-principal: #0B60B0;
+    --cor-secundaria: #40A2D8;
+    --cor-fonte: #000000;
+    --cor-de-fundo: #f4f4f4;
+    --cor-fonte-nav: #ffffff;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-de-fundo);
+}
+
+/* Estilos para a navegação */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-principal);
+    padding: 10px 0;
+}
+
+.nav-link {
+    color: var(--cor-fonte-nav);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Estilos para a seção principal */
+main {
+    padding: 20px;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.intro-text {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.texto{
+    padding-left: 16% ;
+}
+
+.intro-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para a seção da carta */
+.letter {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.letter-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--cor-principal);
+}
+
+.letter-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a seção de fotos */
+.photos {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--cor-principal);
+}
+
+.photos-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.photos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photos-grid img {
+    width: calc(33.333% - 20px);
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-principal);
+    color: #fff;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro-text, .intro-image {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .photos-grid img {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link {
+        padding: 10px 5px;
+        margin: 0 5px;
+    }
+
+    .letter-content {
+        padding: 10px;
+    }
+
+    .photos-grid img {
+        width: calc(100% - 10px);
+    }
+}
